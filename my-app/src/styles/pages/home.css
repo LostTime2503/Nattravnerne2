@@ -1,0 +1,57 @@
+/* styles/pages/home.css */
+
+/* reset and full‐height root */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+/* fill viewport; stack content vertically; center */
+.home-landing {
+  position: relative;
+  height: 100vh;
+  padding-top: 60px;          /* header offset */
+  background: url('../../assets/background_pics/Landing_page_bilde.jpg')
+              center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;     /* stack h1 + button */
+  justify-content: center;    /* vertical centering */
+  align-items: center;        /* horizontal centering */
+  color: #fff;
+  overflow: hidden;
+}
+
+/* dark overlay */
+.home-landing::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.74);
+}
+
+/* heading now participates in flex, no absolute */
+.home-landing h1 {
+  position: relative;  /* above overlay */
+  z-index: 1;
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* button sits under the heading */
+.home-landing .btn {
+  position: relative;  /* above overlay */
+  z-index: 1;
+  margin-top: 1.5rem;  /* space below the heading */
+}
+
+.home-landing__muffin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;          /* sits above overlay but below text */
+}

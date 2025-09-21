@@ -1,0 +1,91 @@
+/* Container styling */
+/* styles/components/header.css */
+/* styles/components/header.css */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00000084; /* make it invisible */
+  box-shadow: none;               /* remove shadow if you had one */
+  z-index: 1000;                  /* float on top */
+}
+
+.site-header__container {
+  /* keep your existing flex layout */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* rest of your styles… */
+
+
+.site-header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.site-header__logo img {
+  height: 60px;
+  display: block;
+}
+
+/* Nav links */
+.site-header__nav .nav-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list__item {
+  margin: 20px;
+}
+
+.nav-list__item a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-list__item a:hover {
+  color: #ffe100;
+}
+
+/* Action buttons */
+.site-header__actions .btn {
+  margin-left: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn--primary {
+  background-color: #FFE618;
+  color: #000000;
+}
+
+.btn--secondary {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn--primary:hover {
+  background-color: #ffea70;
+}
+
+.btn--secondary:hover {
+  background-color: #FFE618;
+}

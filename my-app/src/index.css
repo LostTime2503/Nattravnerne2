@@ -1,0 +1,44 @@
+
+/* Import Jockey One and Josefin Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* 3. Global reset: remove default margins/padding & set box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Root-level layout constraints */
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* 5. Font assignments */
+body {
+  /* fallback stack keeps your previous fonts if Google Fonts fail */
+  font-family: 'Josefin Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+               'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+               'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jockey One', sans-serif;
+}
+
+p {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+               monospace;
+}

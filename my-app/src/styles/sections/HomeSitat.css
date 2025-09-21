@@ -1,0 +1,30 @@
+.home-sitat {
+  position: relative;      /* establish containing block */
+  overflow: hidden;        /* hide any overflow from the muffin */
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #FFE618;
+}
+
+.home-sitat p {
+  position: absolute;      /* sit above the muffin */
+  top: 20%;
+  z-index: 2;
+  margin: 0;
+  font-size: 25px;
+  line-height: 1.4;
+  padding: 0 1rem;
+}
+
+/* the gray muffin image */
+.home-sitat__muffin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* span full section width */
+  height: auto;
+  z-index: 1;              /* behind text but above background */
+}
