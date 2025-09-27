@@ -6,6 +6,8 @@ import YellowMuffin from '../assets/vectors/Vector_Muffin_Gul.png'
 import HomeSitat from '../sections/HomeSitat'
 import HomeHva from '../sections/HomeHva'
 import HomeHvem from '../sections/HomeHvem'
+import HomeNyheter from '../sections/HomeNyheter'
+import HomeArra from '../sections/HomeArra'
 
 const Home = () => (
   <>
@@ -31,6 +33,8 @@ const Home = () => (
     <HomeSitat/>
     <HomeHva />
     <HomeHvem />
+    <HomeNyheter />
+    <HomeArra />
     {/* future imported sections go here */}
   </>
 )

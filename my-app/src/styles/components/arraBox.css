@@ -1,0 +1,62 @@
+.arra-box {
+  width: 300px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.arra-box-image-wrapper {
+  position: relative;
+}
+
+.arra-box-image {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.arra-box-date {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.arra-box-date-day {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.arra-box-date-month {
+  display: block;
+  font-size: 0.875rem;
+}
+
+.arra-box-title {
+  margin: 12px 0 8px;
+  font-size: 1.5rem;
+}
+
+.arra-box-points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.arra-box-point {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.arra-box-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
+.arra-box-text {
+  font-size: 1rem;
+}
