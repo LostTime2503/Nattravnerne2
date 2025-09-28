@@ -18,7 +18,8 @@
   position: absolute;
   top: 12px;
   left: 12px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #FFE618;
+  color: black;
   padding: 4px 8px;
   border-radius: 4px;
   text-align: center;
@@ -46,16 +47,20 @@
   margin: 0;
 }
 
+/* src/styles/components/arraBox.css */
+
 .arra-box-point {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
 }
 
-.arra-box-icon {
+.arra-box-icon-image {
+  width: 16px;
+  height: 16px;
   margin-right: 8px;
-  font-size: 1rem;
 }
+
 
 .arra-box-text {
   font-size: 1rem;

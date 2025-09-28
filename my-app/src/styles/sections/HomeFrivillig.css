@@ -1,0 +1,77 @@
+/* src/styles/sections/HomeFrivillig.css */
+
+.Home-Frivillig {
+  position: relative;      /* establish a positioning context */
+  width: 100vw;
+  height: 550px;
+  padding: 4rem 2rem;
+  background-color: #000000;
+  text-align: center;
+  overflow: hidden;        /* hide any overflow from the img */
+}
+
+.Home-Frivillig-Header,
+.Home-Frivillig-Intro,
+.Home-Frivillig-Stats {
+  position: relative;      /* ensure these stay above the img */
+  z-index: 1;
+}
+
+.Home-Frivillig-Header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.Home-Frivillig-Intro {
+  font-size: 1.125rem;
+  margin: 0 auto 2rem;
+  max-width: 600px;
+  line-height: 1.4;
+  color: #ffffff;
+}
+
+.Home-Frivillig-Stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.Home-Frivillig-Stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Home-Frivillig-StatNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  color: #ffffff;
+}
+
+.Home-Frivillig-StatLabel {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: #ffffff;
+}
+
+.Home-Frivillig-BottomImage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  z-index: 0;              /* behind your text */
+  pointer-events: none;    /* so it never intercepts clicks */
+}
+
+@media (max-width: 768px) {
+  .Home-Frivillig-Stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

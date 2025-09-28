@@ -1,0 +1,119 @@
+.Footer {
+  width: 100vw;
+  background-color: #FFE618;
+  color: #000000;
+  padding: 4rem 2rem;
+  text-align: left;
+}
+
+.Footer-Content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Footer-Column {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Left Column */
+.Footer-Logo {
+  width: 180px;
+  margin-bottom: 1rem;
+}
+
+.Footer-Description {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.4;
+}
+
+.Footer-Social {
+  display: flex;
+  gap: 1rem;
+}
+
+.Footer-SocialButton {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.Footer-SocialButton img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Middle Column */
+.Footer-Heading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+/* Move Navigation column more to the right */
+.Footer-Column--middle {
+  /* adjust this value until it feels right */
+  margin-left: 13rem;
+}
+
+.Footer-Nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Footer-NavLink {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Right Column */
+.Footer-ContactHours {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.Footer-ContactButton {
+  background-color: #000000;
+  color: #FFE618;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* Divider & Copyright */
+.Footer-Divider {
+  border: none;
+  border-top: 1px solid #444444;
+  margin: 2rem 0 1rem;
+}
+
+.Footer-Copyright {
+  text-align: center;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .Footer-Content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .Footer-Column {
+    max-width: 400px;
+  }
+
+  .Footer-ContactButton {
+    width: 100%;
+  }
+}

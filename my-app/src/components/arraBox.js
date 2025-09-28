@@ -1,15 +1,19 @@
+// src/components/ArraBox.js
 import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/components/arraBox.css'
 
-const ArraBox = ({ imageSrc, date, title, points }) => (
+const ArraBox = ({
+  imageSrc,
+  date,
+  title,
+  points,
+  firstIconSrc,
+  secondIconSrc,
+}) => (
   <div className="arra-box">
     <div className="arra-box-image-wrapper">
-      <img
-        src={imageSrc}
-        alt={title}
-        className="arra-box-image"
-      />
+      <img src={imageSrc} alt={title} className="arra-box-image" />
       <div className="arra-box-date">
         <span className="arra-box-date-day">{date.day}</span>
         <span className="arra-box-date-month">{date.month}</span>
@@ -19,10 +23,14 @@ const ArraBox = ({ imageSrc, date, title, points }) => (
     <h3 className="arra-box-title">{title}</h3>
 
     <ul className="arra-box-points">
-      {points.map((point, i) => (
+      {points.map((text, i) => (
         <li key={i} className="arra-box-point">
-          <span className="arra-box-icon">{point.icon}</span>
-          <span className="arra-box-text">{point.text}</span>
+          <img
+            src={i === 0 ? firstIconSrc : secondIconSrc}
+            alt=""
+            className="arra-box-icon-image"
+          />
+          <span className="arra-box-text">{text}</span>
         </li>
       ))}
     </ul>
@@ -36,12 +44,9 @@ ArraBox.propTypes = {
     month: PropTypes.string.isRequired,
   }).isRequired,
   title: PropTypes.string.isRequired,
-  points: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.node.isRequired,
-      text: PropTypes.string.isRequired,
-    })
-  ).isRequired,
+  points: PropTypes.arrayOf(PropTypes.string).isRequired,
+  firstIconSrc: PropTypes.string.isRequired,
+  secondIconSrc: PropTypes.string.isRequired,
 }
 
 export default ArraBox

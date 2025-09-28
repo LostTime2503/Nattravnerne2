@@ -1,0 +1,47 @@
+.Home-Sentraler {
+  width: 100vw;           /* full viewport width */
+  background-color: #555555;
+  padding: 4rem 2rem;
+  text-align: left;
+  height: 780px;
+  position: relative;
+}
+
+.Home-Sentraler-Header {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255, 255, 255);
+  margin-left: 8%;
+}
+
+.Home-Sentraler-Underline {
+  width: 180px;
+  height: 4px;
+  background-color: #ffe618;
+  margin-bottom: 2rem;
+  margin-left: 8%;
+}
+
+.Home-Sentraler-Boxes {
+  display: flex;
+  justify-content: center;   /* center all boxes */
+  align-items: flex-start;   /* align tops */
+  gap: 1.5rem;
+  flex-wrap: wrap;           /* wrap on narrow screens */
+}
+
+/* the gray muffin image */
+.home-sentraler__muffin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* span full section width */
+  height: auto;
+  z-index: 1;              /* behind text but above background */
+}
+
+@media (max-width: 768px) {
+  .Home-Sentraler-Boxes {
+    flex-direction: column;
+  }
+}

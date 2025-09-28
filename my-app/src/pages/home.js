@@ -8,6 +8,9 @@ import HomeHva from '../sections/HomeHva'
 import HomeHvem from '../sections/HomeHvem'
 import HomeNyheter from '../sections/HomeNyheter'
 import HomeArra from '../sections/HomeArra'
+import HomeSentraler from '../sections/HomeSentraler'
+import HomeFrivillig from '../sections/HomeFrivillig'
+import Footer from '../components/footer'
 
 const Home = () => (
   <>
@@ -35,6 +38,9 @@ const Home = () => (
     <HomeHvem />
     <HomeNyheter />
     <HomeArra />
+    <HomeSentraler />
+    <HomeFrivillig />
+    <Footer />
     {/* future imported sections go here */}
   </>
 )
