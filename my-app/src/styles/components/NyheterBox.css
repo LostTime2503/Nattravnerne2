@@ -1,0 +1,158 @@
+/* Make the item visually boxless */
+.Nyheter-Box {
+  background: transparent;
+  border-radius: 0;
+  overflow: visible; /* allow image to overflow the item */
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* let content define height */
+  padding: 0;
+}
+
+/* Image container floats outside the "box" */
+.Nyheter-Box__media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: visible;
+  background: #ffffff00;
+  margin: 0;
+  position: relative;
+  z-index: 2; /* keep image above the text */
+  /* pull the image up so it visually escapes the grid cell */
+  transform: translateY(-20%);
+}
+
+/* Make the image scale cleanly and keep it sharp */
+.Nyheter-Box__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0); /* optional soft shadow only on the image */
+}
+
+/* header row sits under the image visually */
+.Nyheter-Box__header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0 0 0;
+  margin-top: -6%; /* pull header up toward the image for overlap effect */
+  z-index: 1;
+  position: relative;
+}
+
+/* Left aligned header (keeps your naming convention) */
+.Nyheter-Box__header {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  color: #ffffff;
+  background: transparent;
+}
+
+/* Excerpt floats under the header, no box */
+.Nyheter-Box__excerpt {
+  margin: 8px 0 28px 0;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
+  background: transparent;
+  z-index: 0;
+  padding-right: 6px;
+}
+
+/* open button positioning - keep it simple and invisible background */
+.Nyheter-Box__open-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 18px;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Overlay/dialog styling unchanged (keeps accessible modal) */
+.Nyheter-Box__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(6, 10, 15, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.Nyheter-Box__dialog {
+  width: 100%;
+  max-width: 960px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  max-height: 90vh;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Nyheter-Box__close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #111;
+}
+
+.Nyheter-Box__dialog-media {
+  width: 100%;
+  aspect-ratio: 16/8;
+  overflow: hidden;
+  background: #f2f2f6;
+}
+
+.Nyheter-Box__dialog-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.Nyheter-Box__dialog-body {
+  padding: 20px;
+  overflow: auto;
+}
+
+.Nyheter-Box__dialog-title {
+  margin: 0 0 12px 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0b1220;
+}
+
+.Nyheter-Box__dialog-content {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Responsiveness tweaks so overlapping looks good on small screens */
+@media (max-width: 900px) {
+  .Nyheter-Box__media { transform: translateY(-15%); }
+  .Nyheter-Box__header-row { margin-top: -8%; }
+}
+
+@media (max-width: 600px) {
+  .Nyheter-Box__media { transform: translateY(-8%); }
+  .Nyheter-Box__header-row { margin-top: -4%; }
+  .Nyheter-Box__image { border-radius: 4px; }
+}

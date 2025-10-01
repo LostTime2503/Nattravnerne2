@@ -3,8 +3,7 @@ import React from 'react'
 import '../styles/pages/nyheter.css'
 
 // (Optionally) import the sections you’ll render below the hero
-import KontaktOssInfo from '../sections/KontaktOssInfo'
-import KontaktOssSkjema from '../sections/KontaktOssSkjema'
+import NyheterNyheter from '../sections/NyheterNyheter'
 
 const OmOss = () => (
   <div className="nyheter-page">
@@ -12,8 +11,7 @@ const OmOss = () => (
       <h1>Nyheter</h1>
     </header>
     {/* Import other sections under the 500px hero */}
-    <KontaktOssInfo />
-    <KontaktOssSkjema />
+    <NyheterNyheter />
   </div>
 )
 
