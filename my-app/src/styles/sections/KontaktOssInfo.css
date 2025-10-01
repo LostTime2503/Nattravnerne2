@@ -1,0 +1,55 @@
+/* Section wrapper */
+.kontakt-oss-info-section {
+  padding: 4rem 1rem;
+  background-color: #000000;
+}
+
+/* Three columns, full width */
+.kontakt-oss-info-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Each column */
+.kontakt-oss-info-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Vertical divider left of 2nd & 3rd columns */
+.kontakt-oss-info-item:not(:first-child)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 1px;
+  background: #ffffff;
+}
+
+/* Image styling */
+.kontakt-oss-info-image {
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1rem;
+  object-fit: contain;
+}
+
+/* Main header */
+.kontakt-oss-info-header {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+  color: #FFE618;
+}
+
+/* Smaller subheader */
+.kontakt-oss-info-subheader {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+}

@@ -10,7 +10,6 @@ import HomeNyheter from '../sections/HomeNyheter'
 import HomeArra from '../sections/HomeArra'
 import HomeSentraler from '../sections/HomeSentraler'
 import HomeFrivillig from '../sections/HomeFrivillig'
-import Footer from '../components/footer'
 
 const Home = () => (
   <>
@@ -40,7 +39,6 @@ const Home = () => (
     <HomeArra />
     <HomeSentraler />
     <HomeFrivillig />
-    <Footer />
     {/* future imported sections go here */}
   </>
 )

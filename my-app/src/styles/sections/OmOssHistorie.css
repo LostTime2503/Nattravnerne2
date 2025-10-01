@@ -1,0 +1,133 @@
+/* 1) Style the title */
+.OmOss-Historie-title {
+  position: relative;      /* lift it above the ::before line */
+  z-index: 3;              /* any value >1 works, since the line is z-index:1 */
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 0 0 2rem;        /* add bottom space before the timeline */
+  color: #ffffff;
+}
+
+/* 2) Lower the line’s stacking context */
+.OmOss-Historie-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 1;              /* ensure it sits behind title & events */
+}
+
+/* rest of your CSS stays exactly as before */
+.OmOss-Historie {
+  padding: 4rem 1rem;
+  background-color: black;
+  height: 2100px;
+  position: relative;
+}
+.OmOss-Historie-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.OmOss-Historie-event {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 3rem;
+  align-items: flex-start;
+}
+.OmOss-Historie-dot {
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: 4px solid #FFE618;
+  border-radius: 50%;
+  z-index: 2;
+}
+.OmOss-Historie-content {
+  width: 45%;
+  padding: 0 1rem;
+}
+.OmOss-Historie-event:nth-child(odd) {
+  justify-content: flex-start;
+  text-align: left;
+}
+.OmOss-Historie-event:nth-child(even) {
+  justify-content: flex-end;
+  text-align: right;
+}
+.OmOss-Historie-year {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #FFE618;
+  margin-bottom: 0.5rem;
+}
+.OmOss-Historie-header {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.OmOss-Historie-text {
+  margin: 0;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+/* Left-side events (odd): box at flex-start, text inside aligned right */
+.OmOss-Historie-event:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.OmOss-Historie-event:nth-child(odd) .OmOss-Historie-content {
+  text-align: right;
+}
+
+/* Right-side events (even): box at flex-end, text inside aligned left */
+.OmOss-Historie-event:nth-child(even) {
+  justify-content: flex-end;
+}
+
+.OmOss-Historie-event:nth-child(even) .OmOss-Historie-content {
+  text-align: left;
+}
+
+.OmOss-BottomImage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  z-index: 0;              /* behind your text */
+  pointer-events: none;    /* so it never intercepts clicks */
+}
+
+@media (max-width: 600px) {
+  .OmOss-Historie-container::before {
+    left: 20px;
+  }
+  .OmOss-Historie-event {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  .OmOss-Historie-dot {
+    left: 20px;
+    transform: none;
+  }
+  .OmOss-Historie-content {
+    width: auto;
+    margin: 0 0 0 3rem;
+    text-align: left !important;
+    padding: 0;
+  }
+}

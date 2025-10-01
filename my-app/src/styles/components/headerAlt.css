@@ -1,0 +1,30 @@
+/* styles/components/headerAlt.css */
+
+/* styles/components/headerAlt.css */
+
+/* More specific selector to override .site-header */
+header.site-header.site-header--alt {
+  background-color: rgba(255, 255, 255, 0.618);
+}
+
+/* Only applies when you add .site-header--alt */
+.site-header--alt {
+  background-color: #ffffffb0;
+}
+
+.site-header--alt .nav-list__link {
+  color: #000000;
+}
+
+.site-header--alt .nav-list__link:hover {
+  color: #a79300;
+}
+
+.site-header--alt .btn--secondary {
+  background-color: #000000;
+  color: #ffea70;
+}
+
+.site-header--alt .btn--secondary:hover {
+  background-color: #393939;
+}

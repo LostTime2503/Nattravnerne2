@@ -74,7 +74,7 @@ const Footer = () => (
     <hr className="Footer-Divider" />
 
     <p className="Footer-Copyright">
-      &copy; {new Date().getFullYear()} DittFirmanavn. Alle rettigheter reservert.
+      &copy; {new Date().getFullYear()} Proskjekt på skole. Alle rettigheter reservert.
     </p>
   </footer>
 )

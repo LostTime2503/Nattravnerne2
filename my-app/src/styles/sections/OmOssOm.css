@@ -1,0 +1,55 @@
+/* Base section with bg-image & positioning */
+.OmOss-Om {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  height: 700px;
+}
+
+/* Full-section dark overlay */
+.OmOss-Om-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.648);
+  z-index: 1;
+}
+
+/* Content container sits above overlay */
+.OmOss-Om-content {
+  position: relative;
+  z-index: 2;
+  padding: 4rem 1rem;
+}
+
+/* White box with rounded left corners, offset from left edge */
+.OmOss-Om-box {
+  background-color: #ffffffc6;
+  border-radius: 20px;
+  max-width: 400px;
+  margin-left: 2rem;
+  padding: 2rem;
+}
+
+/* Typography inside the box */
+.OmOss-Om-header {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+  color: #333333;
+}
+
+.OmOss-Om-text {
+  margin: 0;
+  line-height: 1.6;
+  color: #555555;
+}
+
+/* the gray muffin image */
+.OmOss-Om__muffin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* span full section width */
+  height: auto;
+  z-index: 1;              /* behind text but above background */
+}

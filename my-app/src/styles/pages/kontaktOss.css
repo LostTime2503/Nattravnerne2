@@ -1,0 +1,39 @@
+/* styles/pages/omOss.css */
+/* styles/pages/omOss.css */
+.kontakt-oss-hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Yellow background + muffin at bottom-left */
+  background-color: #FFE618;
+  background-image: url('../../assets/vectors/Vector_Muffin_PitchBlack.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: contain; /* or set a fixed size, e.g. 150px auto */
+}
+
+
+/* Optional resets/margins in the hero */
+.kontakt-oss-hero h1 {
+  margin: 0;
+  font-size: 60px;
+}
+
+.kontakt-oss-hero p {
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* the gray muffin image */
+.kontakt-oss__muffin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;             /* span full section width */
+  height: auto;
+  z-index: 1;              /* behind text but above background */
+}

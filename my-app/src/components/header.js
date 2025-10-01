@@ -1,30 +1,56 @@
-
+// src/components/Header.js
 import React from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
+
+// Base styles and modifier styles
 import '../styles/components/header.css'
-import logo from '../assets/logo/Hvit_Logo.png'
+import '../styles/components/headerAlt.css'
+
+// Two logo variants
+import whiteLogo from '../assets/logo/Hvit_Logo.png'
+import blackLogo from '../assets/logo/Svart_Logo.png'
 
 const Header = () => {
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${!isHome ? 'site-header--alt' : ''}`}>
       <div className="site-header__container">
-        {/* Logo on the left */}
         <div className="site-header__logo">
-          <img src={logo} alt="Site Logo" />
+          <NavLink to="/">
+            <img
+              src={isHome ? whiteLogo : blackLogo}
+              alt="Site Logo"
+            />
+          </NavLink>
         </div>
 
-        {/* Center nav links */}
         <nav className="site-header__nav">
           <ul className="nav-list">
-            <li className="nav-list__item"><a href="#home">Hjem</a></li>
-            <li className="nav-list__item"><a href="#about">Om Oss</a></li>
-            <li className="nav-list__item"><a href="#services">Kontakt Oss</a></li>
-            <li className="nav-list__item"><a href="#projects">Nyheter</a></li>
-            <li className="nav-list__item"><a href="#blog">Støtt Oss</a></li>
-            <li className="nav-list__item"><a href="#contact">For Frivillige</a></li>
+            <li className="nav-list__item">
+              <NavLink to="/" end className="nav-list__link">
+                Hjem
+              </NavLink>
+            </li>
+            <li className="nav-list__item">
+              <NavLink to="/om-oss" className="nav-list__link">
+                Om Oss
+              </NavLink>
+            </li>
+            <li className="nav-list__item">
+              <NavLink to="/kontakt-oss" className="nav-list__link">
+                Kontakt Oss
+              </NavLink>
+            </li>
+            <li className="nav-list__item">
+              <NavLink to="/nyheter" className="nav-list__link">
+                Nyheter
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
-        {/* Buttons on the right */}
         <div className="site-header__actions">
           <button className="btn btn--primary">Bli Frivillig</button>
           <button className="btn btn--secondary">Logg Inn</button>
