@@ -48,6 +48,11 @@ const Header = () => {
                 Nyheter
               </NavLink>
             </li>
+            <li className="nav-list__item">
+              <NavLink to="/støtt-oss" className="nav-list__link">
+                Støtt Oss
+              </NavLink>
+            </li>
           </ul>
         </nav>
 

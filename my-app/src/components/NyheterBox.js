@@ -1,7 +1,7 @@
 import React from "react";
 import "./../styles/components/NyheterBox.css";
 
-export default function NyheterBox({ id, image, title, excerpt, content }) {
+export default function NyheterBox({ id, image, overlayImage, title, content }) {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -19,11 +19,21 @@ export default function NyheterBox({ id, image, title, excerpt, content }) {
   return (
     <div className="Nyheter-Box">
       <div className="Nyheter-Box__media">
-        <img className="Nyheter-Box__image" src={image} alt={title} />
+        <img
+          className="Nyheter-Box__image"
+          src={image}
+          alt={title}
+          onClick={() => setOpen(true)}
+        />
       </div>
 
       <div className="Nyheter-Box__header-row">
-        <h3 className="Nyheter-Box__header">{title}</h3>
+        <h3
+          className="Nyheter-Box__header"
+          onClick={() => setOpen(true)}
+        >
+          {title}
+        </h3>
         <button
           className="Nyheter-Box__open-btn"
           aria-expanded={open}
@@ -33,8 +43,6 @@ export default function NyheterBox({ id, image, title, excerpt, content }) {
           <span className="Nyheter-Box__open-arrow">→</span>
         </button>
       </div>
-
-      <p className="Nyheter-Box__excerpt">{excerpt}</p>
 
       {open && (
         <div
@@ -54,12 +62,15 @@ export default function NyheterBox({ id, image, title, excerpt, content }) {
             </button>
 
             <div className="Nyheter-Box__dialog-media">
-              <img className="Nyheter-Box__dialog-image" src={image} alt={title} />
+              <img
+                className="Nyheter-Box__dialog-image"
+                src={overlayImage}
+                alt={title}
+              />
             </div>
 
             <div className="Nyheter-Box__dialog-body">
               <h2 className="Nyheter-Box__dialog-title">{title}</h2>
-
               <div className="Nyheter-Box__dialog-content">
                 {content}
               </div>

@@ -1,16 +1,14 @@
-/* Make the item visually boxless */
 .Nyheter-Box {
   background: transparent;
   border-radius: 0;
-  overflow: visible; /* allow image to overflow the item */
+  overflow: visible;
   box-shadow: none;
   display: flex;
   flex-direction: column;
-  min-height: 0; /* let content define height */
+  min-height: 0;
   padding: 0;
 }
 
-/* Image container floats outside the "box" */
 .Nyheter-Box__media {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -18,33 +16,30 @@
   background: #ffffff00;
   margin: 0;
   position: relative;
-  z-index: 2; /* keep image above the text */
-  /* pull the image up so it visually escapes the grid cell */
+  z-index: 2;
   transform: translateY(-20%);
 }
 
-/* Make the image scale cleanly and keep it sharp */
 .Nyheter-Box__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 6px;
-  box-shadow: 0 6px 18px rgba(16, 24, 40, 0); /* optional soft shadow only on the image */
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0);
+  cursor: pointer;
 }
 
-/* header row sits under the image visually */
 .Nyheter-Box__header-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 0 0 0;
-  margin-top: -6%; /* pull header up toward the image for overlap effect */
-  z-index: 1;
+  margin-top: -50px;
   position: relative;
+  z-index: 1;
+  padding-bottom: 65px;
 }
 
-/* Left aligned header (keeps your naming convention) */
 .Nyheter-Box__header {
   margin: 0;
   font-size: 18px;
@@ -52,20 +47,11 @@
   text-align: left;
   color: #ffffff;
   background: transparent;
+  cursor: pointer;
+  padding-left: 25px;
+  padding-bottom: 15px;
 }
 
-/* Excerpt floats under the header, no box */
-.Nyheter-Box__excerpt {
-  margin: 8px 0 28px 0;
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 1.4;
-  background: transparent;
-  z-index: 0;
-  padding-right: 6px;
-}
-
-/* open button positioning - keep it simple and invisible background */
 .Nyheter-Box__open-btn {
   background: transparent;
   border: none;
@@ -78,7 +64,6 @@
   justify-content: center;
 }
 
-/* Overlay/dialog styling unchanged (keeps accessible modal) */
 .Nyheter-Box__overlay {
   position: fixed;
   inset: 0;
@@ -124,7 +109,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .Nyheter-Box__dialog-body {
@@ -145,7 +129,6 @@
   line-height: 1.6;
 }
 
-/* Responsiveness tweaks so overlapping looks good on small screens */
 @media (max-width: 900px) {
   .Nyheter-Box__media { transform: translateY(-15%); }
   .Nyheter-Box__header-row { margin-top: -8%; }

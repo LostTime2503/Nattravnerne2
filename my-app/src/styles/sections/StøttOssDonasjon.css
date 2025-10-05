@@ -1,0 +1,85 @@
+/* src/styles/sections/StøttOssDonasjon.css */
+.støtt-oss-donasjon {
+  width: 100%;
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #000000, #000000);
+}
+
+.støtt-oss-donasjon__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.støtt-oss-donasjon__title {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.støtt-oss-donasjon__subtitle {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2rem;
+}
+
+.støtt-oss-donasjon__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.støtt-oss-donasjon__card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  width: 240px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.støtt-oss-donasjon__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.støtt-oss-donasjon__card-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.støtt-oss-donasjon__card-description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.støtt-oss-donasjon__button {
+  background-color: #FFE618;
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.støtt-oss-donasjon__button:hover {
+  background-color: #ffaa00;
+}
+
+@media (max-width: 600px) {
+  .støtt-oss-donasjon__grid {
+    flex-direction: column;
+  }
+
+  .støtt-oss-donasjon__card {
+    width: 100%;
+  }
+}
