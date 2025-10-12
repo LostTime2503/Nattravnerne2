@@ -72,6 +72,23 @@
   border: 1px solid transparent;
 }
 
+/* ensure header action NavLink buttons have no underline and inherit button styles */
+.site-header__actions .btn,
+.site-header__actions .btn:link,
+.site-header__actions .btn:visited {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+/* remove default focus underline from NavLink anchors used as buttons */
+.site-header__actions .btn:focus {
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 3px rgba(255,230,24,0.18);
+}
+
 .btn--primary {
   background-color: #FFE618;
   color: #000000;

@@ -8,6 +8,7 @@ import OmOss from './pages/omOss'
 import KontaktOss from './pages/kontaktOss'
 import Nyheter from './pages/nyheter'
 import StøttOss from './pages/støttOss'
+import Frivillig from './pages/frivillig'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/kontakt-oss" element={<KontaktOss />} />
         <Route path="/nyheter" element={<Nyheter />} />
         <Route path="/støtt-oss" element={<StøttOss />} />
+        <Route path="/frivillig" element={<Frivillig />} />
       </Routes>
 
       <Footer />

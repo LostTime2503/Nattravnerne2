@@ -1,20 +1,20 @@
 // src/pages/omOss.js
 import React from 'react'
-import '../styles/pages/omOss.css'
+import '../styles/pages/omOss.css' // Stilark for Om Oss-siden
 
-// (Optionally) import the sections you’ll render below the hero
-import OmOssOm from '../sections/OmOssOm'
-import OmOssHistorie from '../sections/OmOssHistorie'
+import OmOssOm from '../sections/OmOssOm' // Seksjon: om oss
+import OmOssHistorie from '../sections/OmOssHistorie' // Seksjon: vår historie
 
 const OmOss = () => (
   <div className="om-oss-page">
     <header className="om-oss-hero">
-      <h1>Om Oss</h1>
+      <h1>Om Oss</h1> {/* Sideoverskrift */}
     </header>
-    {/* Import other sections under the 500px hero */}
-    <OmOssOm />
-    <OmOssHistorie />
+
+    {/* Seksjoner under hero */}
+    <OmOssOm /> {/* Om oss */}
+    <OmOssHistorie /> {/* Historie */}
   </div>
 )
 
-export default OmOss
+export default OmOss // Eksporter komponent

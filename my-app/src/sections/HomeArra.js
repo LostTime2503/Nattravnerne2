@@ -3,11 +3,11 @@ import React from 'react'
 import ArraBox from '../components/arraBox'
 import '../styles/sections/HomeArra.css'
 
-// Import your PNG icons as URLs
+// Ikon importering
 import locationIcon from '../assets/icons/map_icon.png'
 import clockIcon    from '../assets/icons/clock_icon.png'
 
-// Placeholder image
+// Pictures
 import event1Img from '../assets/placeholders/avlangt_placeholder.png'
 import GrayMuffin from '../assets/vectors/Vector_Muffin_Gray.png'
 

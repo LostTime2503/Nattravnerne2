@@ -1,7 +1,6 @@
 import React from 'react'
 import '../styles/sections/HomeHvem.css'
 import BackgroundVideo from '../assets/videos/bg_vid2.mp4'
-// ← 1) Import your Button
 import Button from '../components/button'
 
 const HomeHvem = () => (
@@ -29,8 +28,6 @@ const HomeHvem = () => (
         at det skal være mangfold i natteravnene, både når det gjelder bakgrunn,
         alder og kjønn.
       </p>
-
-      {/* ← 2) Use your Button and choose colors here */}
       <Button
         backgroundColor="#FFE618"
         color="#000"

@@ -8,6 +8,16 @@
 .kontakt-oss-skjema-container {
   max-width: 600px;
   margin: 0 auto;
+  
+}
+
+.kontakt-oss-skjema-form,
+.kontakt-oss-skjema-title,
+.kontakt-oss-skjema-input,
+.kontakt-oss-skjema-textarea,
+.kontakt-oss-skjema-button {
+  position: relative;
+  z-index: 2;
 }
 
 .kontakt-oss-skjema-title {
@@ -20,6 +30,7 @@
 .kontakt-oss-skjema-form {
   display: flex;
   flex-direction: column;
+  z-index: 1;
 }
 
 .kontakt-oss-skjema-group {
@@ -41,6 +52,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  z-index: 1;
 }
 
 .kontakt-oss-skjema-textarea {
@@ -53,6 +65,7 @@
 
   /* only allow vertical resizing, no horizontal grow */
   resize: none;
+  z-index: 1;
 }
 
 
@@ -61,6 +74,7 @@
   outline: none;
   border-color: #FFE618;
   box-shadow: 0 0 0 2px #d4b40033;
+  z-index: 1;
 }
 
 .kontakt-oss-skjema-button {
@@ -72,6 +86,7 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
+  z-index: 1;
 }
 
 .kontakt-oss-skjema-button:hover {

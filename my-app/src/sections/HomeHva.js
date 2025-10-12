@@ -1,21 +1,17 @@
 import React from 'react'
 import Button from '../components/button'
 import '../styles/sections/HomeHva.css'
-// ← just swap in your actual image path/filename
 import HvaImage from '../assets/placeholders/avlangt_placeholder.png'
 import BlackMuffin from '../assets/vectors/Vector_Muffin_Black.png'
 
 const HomeHva = () => (
   <section className="hjem-hva-section">
     <div className="hjem-hva-inner">
-      {/* Left: square image */}
       <img
         src={HvaImage}
         alt="Hva seksjon bilde"
         className="hjem-hva-image"
       />
-
-      {/* Right: text + button */}
       <div className="hjem-hva-content">
         <h2 className="hjem-hva-header">
           Hva gjør vi?

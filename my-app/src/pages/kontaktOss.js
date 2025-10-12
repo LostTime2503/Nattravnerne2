@@ -1,20 +1,20 @@
 // src/pages/omOss.js
 import React from 'react'
-import '../styles/pages/kontaktOss.css'
+import '../styles/pages/kontaktOss.css' // Stil for kontaktsiden
 
-// (Optionally) import the sections you’ll render below the hero
-import KontaktOssInfo from '../sections/KontaktOssInfo'
-import KontaktOssSkjema from '../sections/KontaktOssSkjema'
+import KontaktOssInfo from '../sections/KontaktOssInfo' // Informasjonsside
+import KontaktOssSkjema from '../sections/KontaktOssSkjema' // Kontaktskjema
 
 const OmOss = () => (
   <div className="kontakt-oss-page">
     <header className="kontakt-oss-hero">
-      <h1>Kontakt Oss</h1>
+      <h1>Kontakt Oss</h1> {/* Sideoverskrift */}
     </header>
-    {/* Import other sections under the 500px hero */}
-    <KontaktOssInfo />
-    <KontaktOssSkjema />
+
+    {/* Seksjoner under hero */}
+    <KontaktOssInfo /> {/* Kontaktinfo */}
+    <KontaktOssSkjema /> {/* Skjema for melding */}
   </div>
 )
 
-export default OmOss
+export default OmOss // Eksporter komponent

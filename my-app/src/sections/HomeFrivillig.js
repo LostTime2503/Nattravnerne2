@@ -1,7 +1,7 @@
 // src/sections/HomeFrivillig.js
 import React from 'react'
 import '../styles/sections/HomeFrivillig.css'
-import BottomImage from '../assets/vectors/Vector_Footer.png'  // ← your image
+import BottomImage from '../assets/vectors/Vector_Footer.png'  
 
 const stats = [
   { number: '1600+', label: 'Frivillige' },
@@ -24,8 +24,6 @@ const HomeFrivillig = () => (
         </div>
       ))}
     </div>
-
-    {/*  ← Add the bottom image here */}
     <img
       src={BottomImage}
       alt=""

@@ -1,18 +1,18 @@
 // src/pages/omOss.js
 import React from 'react'
-import '../styles/pages/nyheter.css'
+import '../styles/pages/nyheter.css' // Stilark for nyhetssiden
 
-// (Optionally) import the sections you’ll render below the hero
-import NyheterNyheter from '../sections/NyheterNyheter'
+import NyheterNyheter from '../sections/NyheterNyheter' // Hovednyhetsseksjon
 
 const OmOss = () => (
   <div className="nyheter-page">
     <header className="nyheter-hero">
-      <h1>Nyheter</h1>
+      <h1>Nyheter</h1> {/* Sideoverskrift */}
     </header>
-    {/* Import other sections under the 500px hero */}
-    <NyheterNyheter />
+
+    {/* Seksjoner under hero */}
+    <NyheterNyheter /> {/* Viser nyhetsinnlegg */}
   </div>
 )
 
-export default OmOss
+export default OmOss // Eksporter komponent
